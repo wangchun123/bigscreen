@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/left.css">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/scroll.js"></script>
+    
+    
+    <style>
+            body{
+                background: url("../images/background.jpg") center center no-repeat;
+                
+            }
+            html{
+                border-right: 1px solid #00A9F6;
+            }
+    </style>
+</head>
+<body>
+        <div class="all">
+                <div class="top">
+                    <img src="../images/left.png" alt="">
+                    <span>隐患处理</span>
+                    <div class="right">
+                        <p style="margin-left:-20px">当月处理</p>
+                        <p style="margin-right:-100px">100</p>
+                    </div>
+                </div>
+                        <div class="middle">
+                            <div class="left">
+                                <p>当日处理</p>
+                                <p style="margin-top:50px;font-size:40px">10</p>
+                            </div>
+                            <div class="right">
+                                <ul class="one">
+                                    <p style="margin-left:-30px;font-size:20px">未处理</p>
+                                    <p style="font-size:30px;">4</p>
+                                </ul>
+                                <ul class="two">
+                                    <p style="margin-left:-20px;font-size:20px">处理中</p>
+                                    <p style="font-size:30px;">4</p>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list" style="margin-top:30px">
+                            <div class="header">
+                                <p style="margin-left:10px">类型</p>
+                                <p style="margin-left:400px;">摘要</p>
+                                <p style="margin-left:400px;">状态</p>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="myscroll">
+                                <ul>
+                                    <li><a href="#">用FlexSlider制作支付宝2013版幻灯片</a><span>1111</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">扁平化UI/Flat UI Kit(PSD)</a><span>1111</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">童趣卡通圣诞老人矢量素材(EPS)</a><span>1111</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">63个线性图标素材(PSD)</a><span>1111</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">15个音乐类图标素材(AI)</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">jQuery侧边导航插件SidebarJS</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">jQuery计时器插件TimeCircles</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">jQuery仿Google Play幻灯片效果插件plusview</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">100个圣诞节矢量图标(PSD/SVG)</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    <li><a href="#">用FlexSlider制作《枪神纪》幻灯片效果</a><span>11</span><img src="1(1).png" alt=""></li>
+                                    
+                                </ul>
+                            </div>
+                </div>
+    
+</body>
+</html>
+<script src="../js/left.js"></script>
+<script src="../js/util.js"></script>
+<script>
+$.ajax({
+        url:"http://192.168.1.103:8080/pubinfo-restful/tdIotDevice/hiddenDangerSummary.rf",
+        type:"get",
+        success:function(res){
+            console.log("res",res);
+        }
+    })
+</script>

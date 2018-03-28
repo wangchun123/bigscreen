@@ -1,0 +1,136 @@
+.all{
+    width:960px;
+    margin: 0 auto;
+}
+.top{
+    height:120px;
+    position: relative;
+}
+.top span{
+    position: absolute;
+    width:200px;
+    height: 40px;
+    left:20px;
+    top:30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 45px;
+    color:#00A9F6; 
+}
+.top .right{
+    position: absolute;
+    right:35px;
+    top:25px;
+    color:#00A9F6;
+    font-size: 25px; 
+}
+.top .right p:last-child{
+    font-size: 30px;
+}
+.middle {
+   height:300px;
+}
+.middle .right{
+    margin-left:68%;
+}
+.middle .left,.middle .right{
+    margin-top: 30px;
+    height: 300px;
+    float: left;
+}
+.middle .left {
+    margin-top:30px;
+    font-size: 16px;
+}
+.middle .left p:first-child{
+    color:#00A9F6;
+}
+.middle .left p:last-child{
+    color:#84E0FF;
+    font-size:50px;
+}
+.middle .right .one,.middle .right .two{
+    float: left;
+   
+}
+.middle .two{
+   margin-left: 110px;
+   font-size: 16px;
+}
+.middle .right .one p:first-child{
+    color:#015AA7;
+    font-size: 16px;
+}
+.middle .right .one p:last-child{
+    margin-top: 40px;
+    color: red;
+    font-size: 16px;
+    margin-right:-100px;
+}
+.middle .right .two p:first-child{
+    font-size: 16px;
+    color:#015AA7;
+}
+.middle .right .two p:last-child{
+    margin-top: 40px;
+    
+    color: yellow;
+}
+
+.list{
+    height:98px;
+    
+}
+.header{
+    height:100px;
+    line-height:50px;
+    border: 1px solid blue;
+    background:#002038;
+    z-index: 100;
+}
+.list .header p{
+    float: left;
+    color:#009EE6;
+    font-size: 16px;
+}
+* { margin: 0; padding: 0;}
+.myscroll { width:100%; height: 260px; margin: 0 auto; border: 1px solid #092A46; line-height: 26px; font-size: 12px; overflow: hidden;}
+.myscroll li {
+     height: 50px; 
+     line-height: 45px;
+     text-align: center;
+     position: relative;
+     font-size: 16px;
+     background: #23242E; 
+    }
+    .myscroll span{
+        position: absolute;
+        right:38px;
+        z-index: 100;
+    }
+    .myscroll img{
+        width: 100px;
+        height: 51px;
+        position: absolute;
+        z-index: 1000;
+        background: #23242E;
+        left: 0;
+    }
+.myscroll a { 
+    color:#ffff;
+     text-decoration: none;
+     display: block;
+     height:50px; 
+     border: 0.5px solid #002038;
+}
+.myscroll a:hover { background: #123C4F;}
+.myscroll .red{
+    color: red;
+}
+.myscroll .yellow{
+    color: yellow;
+}
+
+
+
+

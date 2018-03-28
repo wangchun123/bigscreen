@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/right.css">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+            body{
+                background: url("../images/background.jpg") center center no-repeat;
+            }
+    </style>
+     
+</head>
+<body>
+    <div class="top">
+        <div style="height:150px">
+                <p style="margin-left:35px;">数据统计</p>
+                <p margin-right:-30px;>最近12月</p>
+        </div>
+       <div style="height:1px;background:#00A9F6"></div>
+       <div id="main">
+            <div id="one"></div>
+            <div id="two"></div>
+       </div>
+       <div style="clear:both"></div>
+       <div class="bottom">
+           <div id="left"></div>
+           <div style="height:1px;background:#00A9F6;"></div>
+           <div id="right"></div>
+       </div>
+    </div>
+
+   
+</body>
+</html>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script type="text/javascript">
+// 路径配置
+require.config({
+    paths: {
+        echarts: 'http://echarts.baidu.com/build/dist'
+    }
+});
+  // 使用
+ require(
+    [
+        'echarts',
+        'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+    ],
+    function (ec) {
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = ec.init(document.getElementById('left')); 
+        option = {
+            color: ['#4184FD', '#00FFFF'],
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['所有套数','住宅套数']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                    axisLine:{  
+                     ineStyle:{  
+                              color:'#0087ED',  
+                              width:1,//这里是为了突出显示加上的  
+                              }  
+                            }  
+                    
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name:'所有套数',
+                    type:'bar',
+                    "barGap": "15%",
+                    data:[50, 182, 174, 103, 93, 146, 174, 120, 102, 218, 135, 120]
+                },
+                {
+                    name:'住宅套数',
+                    type:'bar',
+                    "barGap": "15%",
+                    data:[42, 173, 150, 82, 85, 139, 154, 102, 76, 204, 110, 100]
+                }
+            ]
+        };
+        
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    }
+);
+    // 路径配置
+require.config({
+    paths: {
+        echarts: 'http://echarts.baidu.com/build/dist'
+    }
+});
+  // 使用
+ require(
+    [
+        'echarts',
+        'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+    ],
+    function (ec) {
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = ec.init(document.getElementById('right')); 
+        option = {
+            color: ['#4184FD', '#00FFFF'],
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['所有套数','住宅套数']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                    axisLine:{  
+                     ineStyle:{  
+                              color:'#0087ED',  
+                              width:1,//这里是为了突出显示加上的  
+                              }  
+                            }  
+                    
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name:'所有套数',
+                    type:'bar',
+                    "barGap": "15%",
+                    data:[50, 182, 174, 103, 93, 146, 174, 120, 102, 218, 135, 120]
+                },
+                {
+                    name:'住宅套数',
+                    type:'bar',
+                    "barGap": "15%",
+                    data:[42, 173, 150, 82, 85, 139, 154, 102, 76, 204, 110, 100]
+                }
+            ]
+        };
+        
+        // 为echarts对象加载数据 
+        myChart.setOption(option); 
+    }
+);
+
+</script>
+<script src="../js/right.js"></script>
